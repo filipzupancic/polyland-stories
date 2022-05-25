@@ -1,0 +1,162 @@
+.wallet-wrap{
+    display: flex;
+    align-items: center;
+    &__address{
+        margin-right: 15px;
+    }
+}
+
+.status{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #444;
+    margin-right: 5px;
+    &--green{
+        background-color: green;
+    }
+}
+
+
+// timeline style
+$primary: #d6cdea;
+$secondary: #8ecce5;
+$info: #539fad;
+$success: #72c3d4;
+$warning: #a384ac;
+$danger: red;
+.timeline-wrap-text{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.timeline {
+    position: relative;
+    padding-left: 4rem;
+    margin: 0 0 0 30px;
+    color: white;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: #454545;
+    }
+
+    .timeline-container {
+        position: relative;
+        margin-bottom: 2.5rem;;
+
+        h4{
+            font-family: "Dosis", sans-serif;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: -88px;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 15px;
+            background: $secondary;
+
+            i {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .timeline-body {
+            background: #454545;;
+            border-radius: 0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(black, 0.05);
+
+            &:before {
+                content: '';
+                background: inherit;
+                width: 20px;
+                height: 20px;
+                display: block;
+                position: absolute;
+                left: -10px;
+                transform: rotate(45deg);
+                border-radius: 0 0 0 2px;
+            }
+
+            p{
+                margin-bottom: 0;
+            }
+
+            .timeline-title {
+                margin-bottom: 10px;
+               
+               
+            }
+
+            .timeline-subtitle {
+                font-weight: 300;
+            
+                opacity: .4;
+                margin-bottom: 10px;
+                font-size: 13px;
+            }
+        }
+
+        // Primary Timeline
+        &.primary {
+            .badge,
+            .timeline-icon {
+                background: $primary !important;
+            }
+        }
+
+        // Info Timeline
+        &.info {
+            .badge,
+            .timeline-icon {
+                background: $info !important;
+            }
+        }
+
+        // Success Timeline
+        &.success {
+            .badge,
+            .timeline-icon {
+                background: $success !important;
+            }
+        }
+
+        // Warning Timeline
+        &.warning {
+            .badge,
+            .timeline-icon {
+                background: $warning !important;
+            }
+        }
+
+        // Dnager Timeline
+        &.danger {
+            .badge,
+            .timeline-icon {
+                background: $danger !important;
+            }
+        }
+
+    }
+}

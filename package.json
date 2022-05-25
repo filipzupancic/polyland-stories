@@ -1,0 +1,54 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "test": "jest",
+    "test-all": "yarn lint && yarn type-check && yarn test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "chart.js": "^3.5.1",
+    "ethers": "^5.4.1",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-chartjs-2": "^3.0.4",
+    "react-dom": "^17.0.2",
+    "react-tsparticles": "^1.34.0",
+    "sass": "^1.39.0",
+    "web3modal": "^1.9.4"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "babel-jest": "^27.0.2",
+    "eslint": "^7.19.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.2.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.4",
+    "jest-watch-typeahead": "^0.6.1",
+    "lint-staged": "^10.0.10",
+    "prettier": "^2.0.2"
+  }
+}

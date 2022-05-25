@@ -1,0 +1,22 @@
+body{
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+}
+
+a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none !important;
+    transition: 0.3s;
+    &:hover{
+        color: #3edad7;
+    }
+}
+
+a.underlined{
+    color: #3edad7;
+    text-decoration: underline !important;
+}
+
+        
+html{scroll-behavior:smooth}
